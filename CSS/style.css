@@ -18,17 +18,19 @@ body {
 /*navbar*/
 
 .navbar {
-    background: linear-gradient(rgb(76, 243, 243), rgb(70, 164, 252));
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
 }
 
 .navbar .logoPrincipal {
-    width: 130px;
-    grid-row: 1/2;
     grid-column: 2/3;
-    display: flex;
+    grid-row: 1/2;
+}
+
+.navbar .logoPrincipal img {
+    width: 130px;
 }
 
 .navbar .menu {
@@ -43,49 +45,44 @@ body {
 
 .navbar .menu li {
     list-style: none;
-    /*le quita los puntos que estan a la izquierda de lista*/
 }
 
 .navbar .menu a {
     text-decoration: none;
-    /*le quita la linea que esta debajo de los enlaces*/
     color: black;
     cursor: pointer;
-    /*pone la manito del cursor del mouse para los enlaces*/
     font-weight: 500;
     /*pone un peso a la letra, la pone un poco mas gruesa*/
     letter-spacing: 0px;
     /*le añade separacion entre las letras de una palabra*/
     transition: all 0.4s;
-    /*es el tiempo que dura la animacion. lo pongo aqui pq si lo pongo en el :hover la animacion se quita de golpe*/
 }
 
 .navbar .menu a:hover {
-    /*hover es una subclase que da una pequeña animacion cuando pasamos el mouse cerca de un elemento*/
-    color: white;
+    color: rgba(0, 0, 0, 0.285);
     transform: scale(1.08);
-    /*aumenta un poquito el tamaño*/
 }
 
 .navbar .menu-bar {
     display: none;
 }
 
-.navbar .shopping {
+.navbar .iconos-navbar {
     grid-column: 8/9;
     grid-row: 1/2;
-    font-size: 1.5em;
-    justify-content: center;
-    z-index: 3;
+    font-size: 1.8em;
+    display: flex;
+    gap: 15px;
 }
 
-.navbar .shopping a {
+.navbar .iconos-navbar a {
     color: black;
     transition: all 0.4s;
+    text-decoration: none;
 }
 
-.navbar .shopping a:hover {
-    color: white;
+.navbar .iconos-navbar a:hover {
+    color: rgba(0, 0, 0, 0.285);
     transform: scale(1.08);
 }
 
@@ -93,7 +90,7 @@ body {
 /*main hero*/
 
 .hero {
-    height: 80vh;
+    height: 70vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/camisetas\ mosaico.png');
     background-size: cover;
     background-position: center;
@@ -101,7 +98,6 @@ body {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(8, 1fr);
-
 }
 
 .hero .info-content {
@@ -141,7 +137,7 @@ body {
     border: 1px solid;
     border-radius: 30px;
     width: 150px;
-    transition: all 0.8s;
+    transition: all 0.2s;
 }
 
 .hero .btn:hover {
@@ -154,7 +150,7 @@ body {
 
 .footer {
     /*contenedor footer general*/
-    background: linear-gradient(rgb(76, 243, 243), rgb(70, 164, 252));
+    background-color: white;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     padding: 20px;
@@ -165,7 +161,10 @@ body {
     grid-column: 2/8;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+}
+
+.footer-section {
+    text-align: center;
 }
 
 .footer-section h3 {
@@ -177,6 +176,7 @@ body {
 .footer-section ul li {
     list-style: none;
     margin-bottom: 5px;
+    font-size: 20px;
 }
 
 .footer-section a {
@@ -186,13 +186,28 @@ body {
 }
 
 .footer-section a:hover {
-    color: white;
+    color: rgba(0, 0, 0, 0.285);
+}
+
+.medios-atencion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.medios-atencion i {
+    font-size: 1.5em;
+}
+
+.medios-atencion p {
+    font-size: 20px;
 }
 
 .social-media {
     display: flex;
-    gap: 15px;
     justify-content: center;
+    gap: 15px;
 }
 
 .social-media a {
@@ -209,6 +224,17 @@ body {
     grid-row: 2/3;
     text-align: center;
     margin-top: 20px;
+}
+
+.sellos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sellos img {
+    width: 170px;
+    margin-top: 10px;
 }
 
 /*modal*/
@@ -261,4 +287,188 @@ body {
 
 .modal ul li {
     font-family: 'Valley Sans', sans-serif;
+}
+
+/*Carrusel*/
+
+.container-carrusel {
+    width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    width: max-content;
+    animation: moverCarrusel 30s linear infinite;
+}
+
+.carrusel img {
+    height: 225px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.carrusel img:hover {
+    height: 225px;
+    border-radius: 5px;
+    transform: scale(1.08);
+}
+
+@keyframes moverCarrusel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*hero parte dos*/
+
+.btn {
+    font-size: 1em;
+    background: none;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 150px;
+    transition: all 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background-color: black;
+    cursor: pointer;
+}
+
+.modelo-tarjeta {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.imagen-temporadas {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/modelo\ 2.jpg');
+}
+
+.imagen-mundial {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/lucho.png');
+}
+
+.modelo-info {
+    grid-column: 7/10;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.411);
+    border-radius: 30px;
+    height: 280px;
+    width: 350px;
+    padding: 25px;
+}
+
+/*catalogo*/
+
+.barra-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#barraBusqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px gray;
+    text-align: center;
+}
+
+#lupa {
+    font-size: 1.3em;
+}
+
+.novedades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#catalogo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1500px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    width: 330px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.container img {
+    width: 215px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+}
+
+.btn-pedido {
+    font-size: 1em;
+    background: none;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 150px;
+    transition: all 0.2s;
+}
+
+.btn-pedido:hover {
+    transform: scale(1.08);
+    background-color: rgba(128, 128, 128, 0.278);
+    cursor: pointer;
+}
+
+/*banners*/
+
+.banners {
+    display: flex;
+    width: 100%;
+}
+
+.banner-barsa,
+.banner-madrid {
+    width: 50%;
+    overflow: hidden;
+}
+
+.video-banner {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
 }

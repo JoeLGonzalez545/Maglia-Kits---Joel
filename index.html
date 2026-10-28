@@ -7,7 +7,7 @@
     <title>Maglia Kits</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/mediaQuery.css">
-    <link rel="icon" href="./img/icono.png" type="image/png">
+    <link rel="icon" href="./img/logo maglia.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
 </head>
@@ -18,17 +18,19 @@
 
         <div class="navbar">
 
-            <img class="logoPrincipal" src="./img/logo maglia.png" alt="Logo Maglia Kits">
+            <a href="./index.html" class="logoPrincipal"><img src="./img/logo maglia.png" alt="Logo Maglia Kits"></a>
 
             <ul class="menu" id="menu">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Temporada 26/27</a></li>
-                <li><a href="">FIFA Word Cup</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./temporada.html">Temporada 26/27</a></li>
+                <li><a href="./fifa.html">FIFA Word Cup</a></li>
+                <li><a href="./informacion.html">Más información</a></li>
             </ul>
 
-            <div class="shopping">
-                <a href="https://wa.me/573042117573"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div class="iconos-navbar">
+                <a href="https://wa.me/573042117573"><i class="fa-solid fa-cart-shopping"></i><span
+                        id="cantidad-carrito">0</span></a>
+                <a href="#"><i class="fa-regular fa-heart" id="favoritos"></i><span id="cantidad-favoritos">0</span></a>
             </div>
 
             <div class="menu-bar" id="menu-bar">
@@ -39,53 +41,219 @@
 
     </header>
 
-    <main class="hero">
+    <main>
+        <section class="hero">
 
-        <div class="info-content">
+            <div class="info-content">
 
-            <h3>¡Elige tu pasión!</h3>
-            <h1>Maglia Kits</h1>
-            <p><strong>Encuentra las camisetas de tus equipos y jugadores favoritos y lleva tu pasión por el fútbol a
-                    donde quiera que vayas. Calidad, estilo y pasión en una sola camiseta, ideal para acompañarte en la
-                    cancha o en la tribuna. Elige la tuya y demuestra la pasión
-                    que corre por tu venas.
-                </strong></p>
-            <button class="btn" id="readMoreBtn">Read More</button>
-
-        </div>
-
-        <div class="modal" id="infoModal">
-
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <h2>Más información</h2>
-                    <span class="close-btn" id="closeBtn">&times;</span>
-                </div>
-
-                <p>Si buscas: comodidad, resistencia y un diseño que refleje tu
-                    pasión por el fútbol, estas en el lugar correcto. <br><br>
-
-                    Trabajamos con los mejores proveedores internacionales,
-                    garantizando productos importados de primera calidad. <br><br>
-
-                    Ya sean clubes o selecciones nacionales, aquí
-                    encontrarás la opción perfecta para ti al precio más competitivo del mercado, para que disfrutes de
-                    tu camiseta favorita sin gastar de más.</p>
-
-                <h2>Calidad y Categorías:</h2>
-                <ul>
-                    <li>AAA</li>
-                    <li>1.1</li>
-                    <li>Retros</li>
-                    <li>Equipaciones completas</li>
-                </ul>
-
-                <p>¿Listo para ordenar? Dale click al icono del carrito</p>
+                <h3>¡Elige tu pasión!</h3>
+                <h1>Maglia Kits</h1>
+                <p><strong>Encuentra las camisetas de tus equipos y jugadores favoritos y lleva tu pasión por el fútbol
+                        a
+                        donde quiera que vayas. Calidad, estilo y pasión en una sola camiseta, ideal para acompañarte en
+                        la
+                        cancha o en la tribuna. Elige la tuya y demuestra la pasión
+                        que corre por tu venas.
+                    </strong></p>
+                <button class="btn" id="readMoreBtn">Conoce más</button>
 
             </div>
 
-        </div>
+            <div class="modal" id="infoModal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2>Más información</h2>
+                        <span class="close-btn" id="closeBtn">&times;</span>
+                    </div>
+
+                    <p>Si buscas: comodidad, resistencia y un diseño que refleje tu
+                        pasión por el fútbol, estas en el lugar correcto. <br><br>
+
+                        Trabajamos con los mejores proveedores internacionales,
+                        garantizando productos importados de primera calidad. <br><br>
+
+                        Ya sean clubes o selecciones nacionales, aquí
+                        encontrarás la opción perfecta para ti al precio más competitivo del mercado, para que disfrutes
+                        de
+                        tu camiseta favorita sin gastar de más.</p>
+
+                    <h2>Calidad y Categorías:</h2>
+                    <ul>
+                        <li>AAA</li>
+                        <li>1.1</li>
+                        <li>Retros</li>
+                        <li>Equipaciones completas</li>
+                    </ul>
+
+                    <p>¿Listo para ordenar? Añade una prenda al carrito</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="modelo">
+
+            <div class="modelo-tarjeta imagen-temporadas">
+                <div class="modelo-info">
+                    <h1>Exclusividad <br> Calidad <br> Estilo <br> ¡Lo mejor solo aquí!</h1>
+                    <a href="./temporada.html"><button class="btn">Comprar</button></a>
+                </div>
+            </div>
+
+            <div class="modelo-tarjeta imagen-mundial">
+                <div class="modelo-info">
+                    <h1>Siente la pasión del mundial en tu piel <br> ¡Solo en Maglia Kits!</h1>
+                    <a href="./fifa.html"><button class="btn">Comprar</button></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container-carrusel">
+            <div class="carrusel">
+
+                <img src="./img/barsa local carrusel.webp" alt="Maglia Kits Carrusel">
+                <img src="./img/barsa visita carrusel.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/madrid local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/madrid visitante.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/colombia local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/colombia visita.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/españa local.png" alt="Maglia Kits Carrusel">
+                <img src="./img/españa visitan.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/brasil local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/portugal local.jpg" alt="Maglia Kits Carrusel">
+
+                <img src="./img/barsa local carrusel.webp" alt="Maglia Kits Carrusel">
+                <img src="./img/barsa visita carrusel.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/madrid local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/madrid visitante.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/colombia local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/colombia visita.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/españa local.png" alt="Maglia Kits Carrusel">
+                <img src="./img/españa visitan.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/brasil local.jpg" alt="Maglia Kits Carrusel">
+                <img src="./img/portugal local.jpg" alt="Maglia Kits Carrusel">
+
+            </div>
+        </section>
+        <br>
+
+        <section class="novedades">
+            <h1>¡LO MÁS PEDIDO!</h1>
+            <br>
+
+            <div class="barra-busqueda">
+
+                <i class="fa-brands fa-sistrix" id="lupa"></i>
+                <input type="text" id="barraBusqueda" placeholder="Ingrese el nombre un equipo">
+
+            </div>
+            <br>
+            <div id="catalogo">
+
+                <div class="container">
+                    <img src="./img/españa local.png" alt="España Lc">
+                    <h2 class="nombreProducto">España Lc. 2026</h2>
+                    <h3>$70.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/españa visitan.jpg" alt="España Visit">
+                    <h2 class="nombreProducto">España Visit. 2026</h2>
+                    <h3>$80.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/argentina local.jpg" alt="Argentina Lc">
+                    <h2 class="nombreProducto">Argentina Lc. 2026</h2>
+                    <h3>$70.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/argentina visit.webp" alt="Argentina Visit">
+                    <h2 class="nombreProducto">Argentina Visit. 2026</h2>
+                    <h3>$80.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/alemania local.jpg" alt="Alemania Lc">
+                    <h2 class="nombreProducto">Alemania Lc. 2026</h2>
+                    <h3>$70.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/francia local.jpg" alt="Francia Lc">
+                    <h2 class="nombreProducto">Francia Lc. 2026</h2>
+                    <h3>$70.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/noruega visita.jpg" alt="Noruega Visit">
+                    <h2 class="nombreProducto">Noruega Visit. 2026</h2>
+                    <h3>$80.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/portugal negra visit.webp" alt="Portugal Visit">
+                    <h2 class="nombreProducto">Portugal Visit. 2026</h2>
+                    <h3>$80.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/bayern local.jpg" alt="Bayern Lc">
+                    <h2 class="nombreProducto">Bayern Lc. 2026</h2>
+                    <h3>$100.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/bayern visitan.jpg" alt="Bayern Visit">
+                    <h2 class="nombreProducto">Bayern Visit. 2026</h2>
+                    <h3>$100.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/madrid azul.jpg" alt="Real Madrid Visit">
+                    <h2 class="nombreProducto">Real Madrid Visit. 2025</h2>
+                    <h3>$100.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+                <div class="container">
+                    <img src="./img/barsa local.jpg" alt="Barcelona Lc">
+                    <h2 class="nombreProducto">FC Barcelona Lc. 2026</h2>
+                    <h3>$100.000</h3>
+                    <a href="https://wa.me/573042117573"><button class="btn-pedido">Hacer pedido</button></a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="banners">
+
+            <div class="banner-barsa">
+                <video src="./archivos/barsa banner.mp4" class="video-banner" autoplay loop muted></video>
+            </div>
+
+            <div class="banner-madrid">
+                <video src="./archivos/madrid banner.mp4" class="video-banner" autoplay loop muted></video>
+            </div>
+
+        </section>
 
     </main>
 
@@ -94,28 +262,51 @@
         <div class="footer-content">
 
             <div class="footer-section">
+
                 <h3>Navegación:</h3>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Temporada 26/27</a></li>
-                    <li><a href="">FIFA Word Cup</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./temporada.html">Temporada 26/27</a></li>
+                    <li><a href="./fifa.html">FIFA Word Cup</a></li>
+                    <li><a href="./informacion.html">Más información</a></li>
                 </ul>
+
             </div>
 
             <div class="footer-section">
-                <h3>Listen Online:</h3>
-                <p><i class="fa-solid fa-headphones"></i>Escucha el verdadero jogo bonito</p>
+
+                <h3>Medios de atención:</h3>
+                <div class="medios-atencion">
+                    <a href="https://wa.me/573042117573">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>WhatsApp</p>
+                    </a>
+                    <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D">
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>Instagram</p>
+                    </a>
+                </div>
+
             </div>
 
             <div class="footer-section">
+
                 <h3>Síguenos en nuestras redes sociales:</h3>
                 <div class="social-media">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+                            class="fa-brands fa-tiktok"></i></a>
                 </div>
+
+                <div class="sellos">
+                    <img src="./img/sellos.jpg" alt="Sellos de verificación">
+                </div>
+
             </div>
 
         </div>
@@ -125,14 +316,6 @@
         </div>
 
     </footer>
-
-
-
-
-
-
-
-
 
     <script src="./JS/JavaScript.js"></script>
 </body>
