@@ -1,11 +1,11 @@
-/* Estilos de la página de noticias y sus tarjetas. */
+/* PAGINA DE NOTICIAS */
 .pagina-noticias {
-    min-height: 70vh; /* Altura mínima: ocupa al menos el 70 % de la ventana. */
-    padding: 45px 4% 60px; /* Espacio interior: arriba, lados y abajo. */
-    background: #f4f5f3; /* Fondo gris muy claro. */
+    min-height: 70vh;
+    padding: 45px 4% 60px;
+    background: #f4f5f3;
 }
 
-/* Guía de tallas ubicada al principio de Más información. */
+/* GUIA DE TALLAS */
 .seccion-info {
     max-width: 730px;
     margin: 0 auto 68px;
@@ -96,6 +96,7 @@
     line-height: 1.5;
 }
 
+/* CAMBIOS Y DEVOLUCIONES */
 .cambios-devoluciones {
     max-width: 1100px;
     margin: 0 auto 68px;
@@ -128,7 +129,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
 }
 
-.tarjeta-cambio > i {
+.tarjeta-cambio>i {
     margin-bottom: 12px;
     color: #111;
     font-size: 1.9em;
@@ -148,168 +149,151 @@
     line-height: 1.5;
 }
 
-/* Centra el título, la etiqueta y la descripción de la página. */
+/* ENCABEZADO DE NOTICIAS */
 .encabezado-noticias {
-    margin: 0 auto 35px; /* Centra el bloque y deja espacio debajo. */
-    text-align: center; /* Alinea el texto en el centro. */
+    margin: 0 auto 35px;
+    text-align: center;
 }
 
-/* Etiqueta pequeña que aparece sobre el título principal. */
 .etiqueta-noticias {
-    margin-bottom: 8px; /* Separa la etiqueta del elemento siguiente. */
-    color: #278f88; /* Usa el color verde azulado de la página. */
-    letter-spacing: 2px; /* Deja más espacio entre las letras. */
-    font-size: .9em; /* Hace el texto un poco más pequeño que el normal. */
+    margin-bottom: 8px;
+    color: #278f88;
+    letter-spacing: 2px;
+    font-size: .9em;
 }
 
-/* Da estilo al título principal dentro del encabezado. */
 .encabezado-noticias h1 {
-    margin-bottom: 8px; /* Añade espacio debajo del título. */
-    font-size: 2.4em; /* Hace el título 2,4 veces el tamaño base. */
+    margin-bottom: 8px;
+    font-size: 2.4em;
 }
 
-/* Cambia el color y la fuente de la descripción y del texto de ayuda. */
-.encabezado-noticias > p:last-child,
+.encabezado-noticias>p:last-child,
 .ayuda-noticias {
-    color: #555; /* Gris oscuro para que el texto se lea con claridad. */
-    font-family: 'Valley Sans', sans-serif; /* Usa Valley Sans o una fuente sans-serif disponible. */
+    color: #555;
+    font-family: 'Valley Sans', sans-serif;
 }
 
-/* Limita el ancho de la sección y la centra en la página. */
 .seccion-noticias {
-    max-width: 1200px; /* Evita que el contenido se extienda demasiado en pantallas grandes. */
-    margin: 0 auto; /* Centra la sección horizontalmente. */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Estilo del título que presenta la lista de noticias. */
 .seccion-noticias h2 {
-    margin-bottom: 8px; /* Separa el título del texto de ayuda. */
-    font-size: 1.7em; /* Hace el subtítulo más grande que el texto normal. */
+    margin-bottom: 8px;
+    font-size: 1.7em;
 }
 
-/* Deja espacio entre el texto de ayuda y las tarjetas. */
 .ayuda-noticias {
     margin-bottom: 20px;
 }
 
-/* El contenedor ocupa todo el ancho disponible. */
 .visor-noticias {
     display: block;
 }
 
-/* Organiza las noticias en una cuadrícula de dos columnas. */
 .lista-noticias {
-    display: grid; /* Activa la cuadrícula de CSS. */
-    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Crea dos columnas iguales que pueden encogerse. */
-    gap: 22px; /* Separa las tarjetas horizontal y verticalmente. */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
 }
 
-/* Cada noticia se muestra como una tarjeta con imagen y texto. */
 .tarjeta-noticia {
-    display: grid; /* Coloca la imagen y el texto en columnas. */
-    min-height: 270px; /* Define la altura mínima de la tarjeta. */
-    grid-template-columns: minmax(140px, .85fr) 1fr; /* Reserva espacio para imagen y texto; la imagen no baja de 140 px. */
-    overflow: hidden; /* Recorta lo que sobresalga de las esquinas redondeadas. */
-    border: 1px solid rgba(30, 50, 60, .12); /* Añade un borde fino y semitransparente. */
-    border-radius: 12px; /* Redondea las esquinas. */
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .12); /* Añade una sombra suave debajo de la tarjeta. */
+    display: grid;
+    min-height: 270px;
+    grid-template-columns: minmax(140px, .85fr) 1fr;
+    overflow: hidden;
+    border: 1px solid rgba(30, 50, 60, .12);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
 }
 
-/* Asigna un fondo distinto a cada una de las seis tarjetas. */
-.tarjeta-noticia:nth-child(1) { background: #e3f3f5; }
-.tarjeta-noticia:nth-child(2) { background: #fff0df; }
-.tarjeta-noticia:nth-child(3) { background: #ecebff; }
-.tarjeta-noticia:nth-child(4) { background: #e8f3df; }
-.tarjeta-noticia:nth-child(5) { background: #ffe9ec; }
-.tarjeta-noticia:nth-child(6) { background: #f3eafa; }
+/* COLORES DE LAS TARJETAS */
+.tarjeta-noticia:nth-child(1) {
+    background: #e3f3f5;
+}
 
-/* Hace que la foto llene la parte de imagen de cada tarjeta. */
+.tarjeta-noticia:nth-child(2) {
+    background: #fff0df;
+}
+
+.tarjeta-noticia:nth-child(3) {
+    background: #ecebff;
+}
+
+.tarjeta-noticia:nth-child(4) {
+    background: #e8f3df;
+}
+
+.tarjeta-noticia:nth-child(5) {
+    background: #ffe9ec;
+}
+
+.tarjeta-noticia:nth-child(6) {
+    background: #f3eafa;
+}
+
 .tarjeta-noticia img {
-    width: 100%; /* Ocupa todo el ancho de su columna. */
-    height: 100%; /* Ocupa toda la altura de la tarjeta. */
-    min-height: 270px; /* Mantiene una altura mínima para la foto. */
-    object-fit: cover; /* Recorta un poco la foto si hace falta para llenar el espacio. */
+    width: 100%;
+    height: 100%;
+    min-height: 270px;
+    object-fit: cover;
 }
 
-/* Alinea verticalmente el texto y añade espacio alrededor. */
 .texto-noticia {
-    display: flex; /* Activa Flexbox para ordenar los elementos de texto. */
-    flex-direction: column; /* Coloca categoría, título y párrafos uno debajo del otro. */
-    justify-content: center; /* Centra ese contenido verticalmente. */
-    padding: clamp(22px, 4vw, 55px); /* Ajusta el espacio interior entre 22 y 55 px según la pantalla. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
 }
 
-/* Da forma de etiqueta a la categoría de cada noticia. */
 .categoria-noticia {
-    align-self: flex-start; /* Evita que la etiqueta se estire a todo el ancho. */
-    padding: 6px 10px; /* Añade espacio dentro de la etiqueta. */
-    color: #fff; /* Pone el texto en blanco. */
-    background: #278f88; /* Usa el verde azulado como fondo. */
-    border-radius: 20px; /* Redondea la etiqueta para que parezca una píldora. */
-    font-size: .8em; /* Reduce un poco el tamaño del texto. */
-    letter-spacing: 1px; /* Separa las letras de la categoría. */
+    align-self: flex-start;
+    padding: 6px 10px;
+    color: #fff;
+    background: #278f88;
+    border-radius: 20px;
+    font-size: .8em;
+    letter-spacing: 1px;
 }
 
-/* Cambia el color de las etiquetas según la tarjeta. */
-.tarjeta-noticia:nth-child(2) .categoria-noticia { background: #c4772b; }
-.tarjeta-noticia:nth-child(3) .categoria-noticia { background: #6258a8; }
-.tarjeta-noticia:nth-child(4) .categoria-noticia { background: #56813b; }
-.tarjeta-noticia:nth-child(5) .categoria-noticia { background: #bd5260; }
-.tarjeta-noticia:nth-child(6) .categoria-noticia { background: #8753a0; }
+/* COLORES DE LAS CATEGORIAS */
+.tarjeta-noticia:nth-child(2) .categoria-noticia {
+    background: #c4772b;
+}
 
-/* Ajusta el espacio y el tamaño del titular de cada tarjeta. */
+.tarjeta-noticia:nth-child(3) .categoria-noticia {
+    background: #6258a8;
+}
+
+.tarjeta-noticia:nth-child(4) .categoria-noticia {
+    background: #56813b;
+}
+
+.tarjeta-noticia:nth-child(5) .categoria-noticia {
+    background: #bd5260;
+}
+
+.tarjeta-noticia:nth-child(6) .categoria-noticia {
+    background: #8753a0;
+}
+
 .texto-noticia h3 {
-    margin: 14px 0; /* Deja espacio arriba y abajo del titular. */
-    font-size: clamp(1.5em, 3vw, 2.3em); /* Adapta el tamaño al ancho, con mínimo y máximo. */
+    margin: 14px 0;
+    font-size: clamp(1.5em, 3vw, 2.3em);
 }
 
-/* Mejora la lectura de los párrafos de la noticia. */
 .texto-noticia p {
-    margin-top: 10px; /* Separa cada párrafo del elemento anterior. */
-    font-family: 'Valley Sans', sans-serif; /* Usa Valley Sans o una fuente sans-serif disponible. */
-    font-size: 1.08em; /* Hace el texto apenas más grande que el tamaño base. */
-    line-height: 1.6; /* Aumenta la distancia entre líneas para facilitar la lectura. */
+    margin-top: 10px;
+    font-family: 'Valley Sans', sans-serif;
+    font-size: 1.08em;
+    line-height: 1.6;
 }
 
-/* La fuente aparece un poco más pequeña y separada de la noticia. */
 .texto-noticia .fuente-noticia {
     margin-top: 14px;
     font-size: .92em;
 }
 
-/* Colorea el enlace que lleva a la fuente de la noticia. */
 .fuente-noticia a {
     color: #176b66;
-}
-
-/* En pantallas de hasta 700 px, adapta las tarjetas a un diseño vertical. */
-@media (max-width: 700px) {
-    .lista-noticias {
-        grid-template-columns: 1fr; /* Muestra una sola tarjeta por fila. */
-    }
-
-    .tarjeta-noticia {
-        grid-template-columns: 1fr; /* Coloca la foto arriba y el texto abajo. */
-    }
-
-    .tarjeta-noticia img {
-        height: 240px; /* Fija la altura de la foto en móvil. */
-        min-height: 240px;
-    }
-
-    .texto-noticia {
-        padding: 22px; /* Reduce el espacio interior para pantallas pequeñas. */
-    }
-
-}
-
-/* En pantallas muy pequeñas, reduce los márgenes y el título principal. */
-@media (max-width: 550px) {
-    .pagina-noticias {
-        padding: 30px 4% 45px; /* Reduce el espacio alrededor del contenido. */
-    }
-
-    .encabezado-noticias h1 {
-        font-size: 1.9em; /* Hace que el título quepa mejor en el teléfono. */
-    }
 }
