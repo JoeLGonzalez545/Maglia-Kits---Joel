@@ -1,5 +1,3 @@
-/*header*/
-
 @import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -12,9 +10,11 @@
 body {
     font-family: 'Caacupe One', sans-serif;
     overflow-x: hidden;
+    background-color: #f7f7f7;
     /*oculta el scroll horizontal*/
 }
 
+/*header*/
 /*navbar*/
 
 .navbar {
@@ -91,41 +91,56 @@ body {
 
 .hero {
     height: 70vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/camisetas\ mosaico.png');
-    background-size: cover;
-    background-position: center;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.hero .info-content {
-    grid-column: 7/10;
-    grid-row: 3/4;
+.hero-slider {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-content {
+    width: 100%;
+    /*esto es pa que las 3 imagenes no se peguen*/
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.425);
     color: white;
-    background-color: rgba(128, 128, 128, 0.411);
     border-radius: 30px;
-    height: 280px;
-    width: 600px;
-    padding: 25px;
+    padding: 10px 40px;
+    width: max-content;
+    max-width: 85%;
 }
 
-.hero h3 {
+.info-content h3 {
     font-size: 2.5em;
-    font-weight: 1.5em;
 }
 
-.hero h1 {
+.info-content h1 {
     font-size: 3.5em;
 }
 
-.hero p {
-    font-weight: 300;
-    font-family: 'Valley Sans', sans-serif;
+.hero img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
 }
 
 .hero .btn {
@@ -134,7 +149,7 @@ body {
     color: white;
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 30px;
     width: 150px;
     transition: all 0.2s;
@@ -144,6 +159,248 @@ body {
     transform: scale(1.08);
     background-color: black;
     cursor: pointer;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+#prev,
+#next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*modal*/
+
+.modal {
+    display: none;
+    position: fixed;
+    /*para que no se vata pa abajo osea que se muestre en el mismo lugra en la pantalla*/
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    /*es para el orden de apilamiento entre mas grande se muestra al frente*/
+    background: linear-gradient(rgba(0, 0, 0, 0.3));
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*titulos y texto read more*/
+
+.modal-content h2 {
+    font-size: 2em;
+}
+
+.modal ul li {
+    font-family: 'Valley Sans', sans-serif;
+}
+
+#imagen {
+    display: none;
+}
+
+/*Carrusel*/
+
+.container-carrusel {
+    width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    width: max-content;
+    animation: moverCarrusel 30s linear infinite;
+}
+
+.carrusel img {
+    height: 225px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.carrusel img:hover {
+    height: 225px;
+    border-radius: 5px;
+    transform: scale(1.08);
+}
+
+@keyframes moverCarrusel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/*catalogo*/
+
+.barra-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#barraBusqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 25px;
+    border-radius: 5px;
+    border: solid 1px gray;
+    text-align: center;
+}
+
+#lupa {
+    font-size: 1.3em;
+}
+
+.novedades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#catalogo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1500px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    width: 330px;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.container img {
+    width: 215px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.btn-pedido {
+    font-size: 1em;
+    background: none;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 150px;
+    transition: all 0.2s;
+}
+
+.btn-pedido:hover {
+    transform: scale(1.08);
+    background-color: rgba(128, 128, 128, 0.278);
+    cursor: pointer;
+}
+
+/*catalogo modal*/
+
+.camisaOculta {
+    display: none;
+}
+
+.modal-content p {
+    font-size: 1.25em;
+}
+
+.modal-content img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 400px;
+}
+
+.infoTallasBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*banners*/
+
+.banners {
+    display: flex;
+    width: 100%;
+}
+
+.banner-barsa,
+.banner-madrid {
+    width: 50%;
+    overflow: hidden;
+}
+
+.video-banner {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
 }
 
 /*footer*/
@@ -235,240 +492,4 @@ body {
 .sellos img {
     width: 170px;
     margin-top: 10px;
-}
-
-/*modal*/
-
-.modal {
-    display: none;
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background: linear-gradient(rgba(0, 0, 0, 0.3));
-
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    width: 90%;
-    max-width: 500px;
-
-    background-color: white;
-    padding: 30px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.close-btn {
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/*titulos y texto read more*/
-
-.modal-content h2 {
-    font-size: 2em;
-}
-
-.modal ul li {
-    font-family: 'Valley Sans', sans-serif;
-}
-
-/*Carrusel*/
-
-.container-carrusel {
-    width: 100%;
-}
-
-.carrusel {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
-    width: max-content;
-    animation: moverCarrusel 30s linear infinite;
-}
-
-.carrusel img {
-    height: 225px;
-    border-radius: 5px;
-    transition: all 0.2s;
-}
-
-.carrusel img:hover {
-    height: 225px;
-    border-radius: 5px;
-    transform: scale(1.08);
-}
-
-@keyframes moverCarrusel {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/*hero parte dos*/
-
-.btn {
-    font-size: 1em;
-    background: none;
-    color: white;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid;
-    border-radius: 30px;
-    width: 150px;
-    transition: all 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.08);
-    background-color: black;
-    cursor: pointer;
-}
-
-.modelo-tarjeta {
-    height: 65vh;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-}
-
-.imagen-temporadas {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/modelo\ 2.jpg');
-}
-
-.imagen-mundial {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(87, 86, 86, 0.5)), url('../img/lucho.png');
-}
-
-.modelo-info {
-    grid-column: 7/10;
-    grid-row: 4/5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    background-color: rgba(128, 128, 128, 0.411);
-    border-radius: 30px;
-    height: 280px;
-    width: 350px;
-    padding: 25px;
-}
-
-/*catalogo*/
-
-.barra-busqueda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-#barraBusqueda {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 500px;
-    height: 25px;
-    border-radius: 5px;
-    border: solid 1px gray;
-    text-align: center;
-}
-
-#lupa {
-    font-size: 1.3em;
-}
-
-.novedades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#catalogo {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 1500px;
-    width: 100%;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 380px;
-    width: 330px;
-    margin-bottom: 20px;
-    border: 1px solid gray;
-    border-radius: 10px;
-}
-
-.container img {
-    width: 215px;
-    height: 200px;
-    border-radius: 10px;
-    margin: 10px;
-    object-fit: cover;
-}
-
-.btn-pedido {
-    font-size: 1em;
-    background: none;
-    color: black;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid;
-    border-radius: 30px;
-    width: 150px;
-    transition: all 0.2s;
-}
-
-.btn-pedido:hover {
-    transform: scale(1.08);
-    background-color: rgba(128, 128, 128, 0.278);
-    cursor: pointer;
-}
-
-/*banners*/
-
-.banners {
-    display: flex;
-    width: 100%;
-}
-
-.banner-barsa,
-.banner-madrid {
-    width: 50%;
-    overflow: hidden;
-}
-
-.video-banner {
-    display: block;
-    width: 100%;
-    height: 580px;
-    object-fit: cover;
 }

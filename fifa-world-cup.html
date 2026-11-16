@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maglia Kits - FIFA World Cup</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/style fifa.css">
+  <link rel="stylesheet" href="./CSS/mediaQuery.css">
+  <link rel="icon" href="./img/logo maglia.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="navbar">
+      <a href="./index.html" class="logoPrincipal"><img src="./img/logo maglia.png" alt="Logo Maglia Kits"></a>
+
+      <ul class="menu" id="menu">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./temporada.html">Temporada 26/27</a></li>
+        <li><a href="./fifa-world-cup.html">FIFA World Cup</a></li>
+        <li><a href="./informacion.html">Más información</a></li>
+      </ul>
+
+      <div class="iconos-navbar">
+        <a href="#carrito" aria-label="Ver carrito"><i class="fa-solid fa-cart-shopping"></i><span
+            id="cantidad-carrito">0</span></a>
+      </div>
+
+      <div class="menu-bar" id="menu-bar">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="contenedor">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="columna-principal">
+
+      <!-- BANNER ANUNCIO -->
+      <section class="banner">
+        <div class="texto-banner">
+          <h1>ESPAÑA CAMPEONES 2026</h1>
+          <p>¡YA DISPONIBLES!</p>
+          <span>Nueva camiseta edición campeón</span><br>
+          <button class="btn-comprar">COMPRAR AHORA</button>
+        </div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg?utm_source=es.wikipedia.org&utm_campaign=imageinfo&utm_content=original"
+          alt="España Campeones">
+      </section>
+
+      <!-- TÍTULOS Y ETIQUETAS DE NAVEGACIÓN (PILLS) -->
+      <div class="seccion-encabezado mb-3">
+        <h1 class="titulo-catalogo">CATÁLOGOS MUNDIALISTAS (FIFA World Cup)</h1>
+        <h4 class="subtitulo-catalogo">MUNDIALES RECIENTES (2026-2010)</h4>
+
+        <!-- Botones/Etiquetas de acceso rápido a cada Mundial -->
+        <div class="contenedor-pills">
+          <a href="#mundial-2026" class="pill-btn active">Mundial 2026</a>
+          <a href="#mundial-2022" class="pill-btn">Mundial 2022</a>
+          <a href="#mundial-2018" class="pill-btn">Mundial 2018</a>
+          <a href="#mundial-2014" class="pill-btn">Mundial 2014</a>
+          <a href="#mundial-2010" class="pill-btn">Mundial 2010</a>
+          <a href="#kits-retro" class="pill-btn">Retro Kits</a>
+        </div>
+      </div>
+
+      <!-- SECCIÓN CON MARCO: WORLD CUP 2026 -->
+      <section id="mundial-2026" class="caja-mundial mb-4">
+        <h2>WORLD CUP 2026</h2>
+        <div class="grid-camisetas" id="grid-2026"></div>
+      </section>
+
+      <!-- SECCIÓN CON MARCO: WORLD CUP 2022 -->
+      <section id="mundial-2022" class="caja-mundial mb-4">
+        <h2>WORLD CUP 2022</h2>
+        <div class="grid-camisetas" id="grid-2022"></div>
+      </section>
+
+      <!-- SECCIÓN CON MARCO: WORLD CUP 2018 -->
+      <section id="mundial-2018" class="caja-mundial mb-4">
+        <h2>WORLD CUP 2018</h2>
+        <div class="grid-camisetas" id="grid-2018"></div>
+      </section>
+
+      <!-- SECCIÓN CON MARCO: WORLD CUP 2014 -->
+      <section id="mundial-2014" class="caja-mundial mb-4">
+        <h2>WORLD CUP 2014</h2>
+        <div class="grid-camisetas" id="grid-2014"></div>
+      </section>
+
+      <!-- SECCIÓN CON MARCO: WORLD CUP 2010 -->
+      <section id="mundial-2010" class="caja-mundial mb-4">
+        <h2>WORLD CUP 2010</h2>
+        <div class="grid-camisetas" id="grid-2010"></div>
+      </section>
+
+      <!-- SECCIÓN CON MARCO: RETRO KITS -->
+      <section id="kits-retro" class="caja-mundial">
+        <h2>KITS RETRO</h2>
+        <div class="grid-camisetas" id="grid-retro"></div>
+      </section>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: CARRITO -->
+    <aside class="columna-carrito" id="carrito">
+      <div class="caja-carrito">
+        <div class="titulo-carrito">CARRITO DE COMPRAS</div>
+
+        <div class="lista-carrito" id="lista-carrito"></div>
+
+        <div class="total-compra">
+          <p>Subtotal:<span id="subtotal"> $0</span></p>
+          <p>Envío:<span id="envio"> $0</span></p>
+          <h3>TOTAL:<span id="total"> $0</span></h3>
+        </div>
+
+        <a href="https://wa.me/573042117573"><button class="btn-finalizar">FINALIZAR COMPRA</button></a>
+      </div>
+    </aside>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Navegación:</h3>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./temporada.html">Temporada 26/27</a></li>
+          <li><a href="./fifa-world-cup.html">FIFA World Cup</a></li>
+          <li><a href="./informacion.html">Más información</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Medios de atención:</h3>
+        <div class="medios-atencion">
+          <a href="https://wa.me/573042117573"><i class="fa-brands fa-whatsapp"></i>
+            <p>WhatsApp</p>
+          </a>
+          <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+              class="fa-brands fa-instagram"></i>
+            <p>Instagram</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Síguenos en nuestras redes sociales:</h3>
+        <div class="social-media">
+          <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+              class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+              class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/magliakits?obrf=MWtsamU0d254Y3d6bw%3D%3D"><i
+              class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="sellos">
+          <img src="./img/sellos.jpg" alt="Sellos de verificación">
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-buttom">
+      <p>&copy; Maglia Kits. Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="./JS/script carrito.js"></script>
+  <script src="./JS/JavaScript.js"></script>
+
+
+</body>
+
+</html>

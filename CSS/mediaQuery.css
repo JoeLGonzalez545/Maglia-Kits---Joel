@@ -1,8 +1,10 @@
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
 
+    /* NAVBAR */
     .navbar {
         position: relative;
         overflow: visible;
+        z-index: 1000;
     }
 
     .navbar .iconos-navbar {
@@ -50,8 +52,8 @@
         text-decoration: none;
     }
 
-    /*responsive hero*/
 
+    /* HERO */
     .hero .info-content {
         grid-column: 2/9;
         grid-row: 4/6;
@@ -68,8 +70,8 @@
         grid-row: 4/6;
     }
 
-    /*responsive footer*/
 
+    /* FOOTER */
     .footer {
         grid-template-columns: 1fr;
         text-align: center;
@@ -91,4 +93,224 @@
     .footer .footer-buttom {
         grid-column: 1/2;
     }
+
+
+    /* APARTADO FIFA WORD CUP */
+    .contenedor {
+        flex-direction: column;
+        margin: 15px auto;
+        padding: 0 12px;
+    }
+
+    .columna-principal,
+    .columna-carrito {
+        width: 100%;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    .titulo-catalogo {
+        font-size: 1.35rem;
+    }
+
+    .subtitulo-catalogo {
+        font-size: 1rem;
+    }
+
+    .grid-camisetas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .tarjeta {
+        padding: 8px;
+    }
+
+    .tarjeta h4 {
+        font-size: 0.9rem;
+    }
+
+    .tarjeta p {
+        font-size: 0.85rem;
+    }
+
+    .tarjeta button {
+        font-size: 0.65rem;
+    }
+
+
+    /* MAS INFORMACION Y NOTICIAS */
+    .pagina-noticias {
+        padding: 30px 4% 45px;
+    }
+
+    .encabezado-noticias h1 {
+        font-size: 1.9em;
+    }
+
+    .seccion-info {
+        margin-bottom: 48px;
+    }
+
+    .seccion-info .subtitulo-seccion {
+        margin-bottom: 26px;
+        font-size: 1.05em;
+    }
+
+    .lista-noticias,
+    .tarjeta-noticia {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta-noticia img {
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .texto-noticia {
+        padding: 22px;
+    }
+
+
+    /* GUIA DE TALLAS */
+    .tabla-tallas th,
+    .tabla-tallas td {
+        padding: 14px 8px;
+        font-size: 0.9em;
+    }
+
+
+    /* CAMBIOS Y DEVOLUCIONES */
+    .tarjetas-cambios {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CARRITO DE COMPRAS */
+    .carrito-temporada {
+        width: 100%;
+        padding: 15px;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .carrito-temporada h2 {
+        background: white;
+        color: black;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .item-carrito {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .item-carrito button {
+        background: #dc3545;
+        color: white;
+        border: none;
+        padding: 3px 8px;
+        border-radius: 3px;
+    }
+
+    .total-compra {
+        font-size: 1.2rem;
+    }
+
+    .btn-finalizar {
+        width: 100%;
+        background: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 1.3rem;
+        margin-top: 8px;
+    }
+
+    .btn-finalizar:hover {
+        background-color: rgba(128, 128, 128, 0.35);
+        transform: scale(1.04);
+    }
+
+
+    /* TEMPORADA 26/27 */
+    .portada-temporada {
+        min-height: 230px;
+        padding: 35px 18px;
+    }
+
+    .texto-portada h1 {
+        font-size: 2em;
+    }
+
+    .texto-portada>p:last-child {
+        font-size: 1em;
+    }
+
+    .seccion-catalogo {
+        width: 94%;
+        padding-top: 30px;
+    }
+
+    .titulo-catalogo h2 {
+        font-size: 1.65em;
+    }
+
+    .temporada-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo-temporada {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .camiseta {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .imagen-camiseta {
+        height: 165px;
+        margin-bottom: 8px;
+    }
+
+    .camiseta h3 {
+        font-size: 1em;
+    }
+
+    .detalle-camiseta {
+        font-size: 0.9em;
+    }
+
+    .precio-camiseta {
+        font-size: 1em;
+    }
+
+    .btn-agregar {
+        width: 100%;
+        padding: 9px 5px;
+        font-size: 0.9em;
+    }
+
 }

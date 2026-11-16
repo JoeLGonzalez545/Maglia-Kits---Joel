@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Caacupe+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Caacupe One', sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* ESTRUCTURA GENERAL */
+.contenedor {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.columna-principal {
+  flex: 2;
+}
+
+.columna-carrito {
+  flex: 1;
+}
+
+.mb-4 {
+  margin-bottom: 25px;
+}
+
+/* BANNER */
+.banner {
+  background-color: darkred;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.texto-banner p,
+.texto-banner span {
+  font-size: 1.5rem;
+}
+
+.banner img {
+  width: 400px;
+  border-radius: 8px;
+}
+
+.btn-comprar {
+  background: white;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1.13rem;
+  margin-top: 10px;
+}
+
+.btn-comprar:hover {
+  background-color: #d9d9d9;
+}
+
+/* ENCABEZADOS Y PILLS */
+.titulo-catalogo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.subtitulo-catalogo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contenedor-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pill-btn {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.pill-btn:hover {
+  background-color: rgba(128, 128, 128, 0.35);
+  transform: translateY(-2px);
+}
+
+/* CATÁLOGO Y TARJETAS */
+.caja-mundial,
+.caja-carrito {
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.caja-mundial {
+  border: 2px solid #111;
+}
+
+.caja-carrito {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.caja-mundial h2,
+.titulo-carrito {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.titulo-carrito {
+  border: 1px solid black;
+}
+
+.grid-camisetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.tarjeta {
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* BOTONES DE TARJETA Y CARRITO */
+.tarjeta button,
+.btn-finalizar {
+  width: 100%;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.tarjeta button {
+  border-radius: 20px;
+}
+
+.btn-finalizar {
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+
+.tarjeta button:hover,
+.btn-finalizar:hover {
+  background-color: rgba(128, 128, 128, 0.35);
+  transform: scale(1.04);
+}
+
+/* ITEMS DEL CARRITO */
+.total-compra {
+  font-size: 1.2rem;
+}
+
+.item-carrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.item-carrito button {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+#modal-imagen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#img-grande {
+  max-width: 85%;
+  max-height: 85%;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.tarjeta img {
+  cursor: zoom-in;
+}

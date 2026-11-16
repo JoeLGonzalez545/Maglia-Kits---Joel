@@ -4,32 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maglia Kits</title>
+    <title>Maglia Kits - Temporada 26/27</title>
+
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/temporada.css">
     <link rel="stylesheet" href="./CSS/mediaQuery.css">
+
     <link rel="icon" href="./img/logo maglia.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-
 </head>
 
 <body>
 
     <header>
-
         <div class="navbar">
 
-            <a href="./index.html" class="logoPrincipal"><img src="./img/logo maglia.png" alt="Logo Maglia Kits"></a>
+            <a href="./index.html" class="logoPrincipal">
+                <img src="./img/logo maglia.png" alt="Logo Maglia Kits">
+            </a>
 
             <ul class="menu" id="menu">
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./temporada.html">Temporada 26/27</a></li>
-                <li><a href="./fifa.html">FIFA Word Cup</a></li>
+                <li><a href="./fifa-world-cup.html">FIFA World Cup</a></li>
                 <li><a href="./informacion.html">Más información</a></li>
             </ul>
 
             <div class="iconos-navbar">
-                <a href="https://wa.me/573042117573"><i class="fa-solid fa-cart-shopping"></i><span id="cantidad-carrito">0</span></a>
-                <a href="#"><i class="fa-regular fa-heart"></i><span id="cantidad-favoritos">0</span></a>
+                <a href="#carrito" aria-label="Ver carrito de compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cantidad-carrito">0</span>
+                </a>
             </div>
 
             <div class="menu-bar" id="menu-bar">
@@ -37,15 +42,200 @@
             </div>
 
         </div>
-
     </header>
 
-    
+    <main class="temporada">
+
+        <section class="portada-temporada">
+            <div class="texto-portada">
+                <p class="etiqueta-temporada">NUEVA COLECCIÓN</p>
+                <h1>Temporada 26/27</h1>
+                <p>Elige los colores de tu equipo y lleva tu pasión a todas partes.</p>
+            </div>
+        </section>
+
+        <section class="seccion-catalogo">
+
+            <div class="titulo-catalogo">
+                <h2>Elige tu camiseta</h2>
+                <p>Encuentra tu camiseta favorita y agrégala al carrito.</p>
+            </div>
+
+            <div class="temporada-contenido">
+
+                <div class="catalogo-temporada">
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/barsa local.jpg" alt="Camiseta local del FC Barcelona">
+                        </div>
+                        <h3>FC Barcelona local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('FC Barcelona local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/barsa visit.png" alt="Camiseta visitante del FC Barcelona">
+                        </div>
+                        <h3>FC Barcelona Visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('FC Barcelona Visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/madrid local.jpg" alt="Camiseta local del Real Madrid">
+                        </div>
+                        <h3>Real Madrid local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Real Madrid local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/madrid visitante.jpg" alt="Camiseta visitante del Real Madrid">
+                        </div>
+                        <h3>Real Madrid Visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Real Madrid Visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/bayern local.jpg" alt="Camiseta local del Bayern">
+                        </div>
+                        <h3>Bayern local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Bayern local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/bayern visitan.jpg" alt="Camiseta visitante del Bayern">
+                        </div>
+                        <h3>Bayern visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Bayern visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/colombia local.jpg" alt="Camiseta local de Colombia">
+                        </div>
+                        <h3>Colombia local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Colombia local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/colombia visita.jpg" alt="Camiseta visitante de Colombia">
+                        </div>
+                        <h3>Colombia Visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Colombia Visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/argentina local.jpg" alt="Camiseta local de Argentina">
+                        </div>
+                        <h3>Argentina local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Argentina local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/argentina visit.webp" alt="Camiseta visitante de Argentina">
+                        </div>
+                        <h3>Argentina Visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Argentina Visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/portugal local.jpg" alt="Camiseta local de Portugal">
+                        </div>
+                        <h3>Portugal local</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Portugal local')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                    <article class="camiseta">
+                        <div class="imagen-camiseta">
+                            <img src="./img/portugal negra visit.webp" alt="Camiseta visitante de Portugal">
+                        </div>
+                        <h3>Portugal Visitante</h3>
+                        <p class="detalle-camiseta">Temporada 26/27</p>
+                        <p class="precio-camiseta">$180.000</p>
+                        <button class="btn-agregar" onclick="agregarAlCarrito('Portugal Visitante')">
+                            Agregar al carrito
+                        </button>
+                    </article>
+
+                </div>
+
+                <aside class="carrito-temporada" id="carrito">
+
+                    <h2>CARRITO DE COMPRAS</h2>
+
+                    <div class="lista-carrito" id="lista-carrito">
+                    </div>
+
+                    <div class="total-compra">
+                        <p>Subtotal:<span id="subtotal">$0</span></p>
+                        <p>Envío:<span id="envio">$0</span></p>
+                        <p class="total-carrito-temporada">
+                            TOTAL:<span id="total">$0</span>
+                        </p>
+                    </div>
+
+                    <a href="https://wa.me/573042117573"><button class="btn-finalizar">FINALIZAR COMPRA</button></a>
 
 
+                </aside>
 
+            </div>
 
+        </section>
 
+    </main>
 
     <footer class="footer">
 
@@ -54,25 +244,25 @@
             <div class="footer-section">
                 <h3>Navegación:</h3>
                 <ul>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">Temporada 26/27</a></li>
-                    <li><a href="">FIFA Word Cup</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./temporada.html">Temporada 26/27</a></li>
+                    <li><a href="./fifa-world-cup.html">FIFA World Cup</a></li>
+                    <li><a href="./informacion.html">Más información</a></li>
                 </ul>
             </div>
 
             <div class="footer-section">
                 <h3>Listen Online:</h3>
-                <p><i class="fa-solid fa-headphones"></i>Escucha el verdadero jogo bonito</p>
+                <p><i class="fa-solid fa-headphones"></i> Escucha el verdadero jogo bonito</p>
             </div>
 
             <div class="footer-section">
                 <h3>Síguenos en nuestras redes sociales:</h3>
                 <div class="social-media">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                 </div>
             </div>
 
@@ -84,15 +274,9 @@
 
     </footer>
 
-
-
-
-
-
-
-
-
     <script src="./JS/JavaScript.js"></script>
+    <script src="./JS/script carrito.js"></script>
+
 </body>
 
 </html>

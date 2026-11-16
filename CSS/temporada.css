@@ -1,0 +1,270 @@
+/* Estilos de la página de temporada */
+
+.temporada {
+    min-height: 70vh;
+    padding-bottom: 55px;
+    background: #f4f5f3;
+    font-family: 'Caacupe One', sans-serif;
+}
+
+/* Fondo principal de la página */
+
+.portada-temporada {
+    min-height: 280px;
+    padding: 45px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background:
+        linear-gradient(rgba(15, 25, 20, 0.72), rgba(15, 25, 20, 0.72)),
+        url('../img/ESTADIO_BAYERN.jxl');
+    background-size: cover;
+    background-position: center;
+}
+
+.texto-portada {
+    max-width: 700px;
+}
+
+.etiqueta-temporada {
+    margin-bottom: 10px;
+    color: #bdf5dc;
+    font-size: 0.95em;
+    letter-spacing: 2px;
+}
+
+.texto-portada h1 {
+    margin-bottom: 12px;
+    font-size: 2.8em;
+}
+
+.texto-portada>p:last-child {
+    font-family: 'Valley Sans', sans-serif;
+    font-size: 1.2em;
+}
+
+/* Título del catálogo */
+
+.seccion-catalogo {
+    width: min(1150px, 92%);
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.titulo-catalogo {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.titulo-catalogo h2 {
+    margin-bottom: 8px;
+    font-size: 2em;
+}
+
+.titulo-catalogo p {
+    color: #666;
+    font-family: 'Valley Sans', sans-serif;
+    font-size: 1.1em;
+}
+
+/* Cuadrícula de tarjetas */
+
+.catalogo-temporada {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Tarjeta individual */
+
+.camiseta {
+    min-width: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.camiseta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 23px rgba(0, 0, 0, 0.14);
+}
+
+/* Recuadro de imagen: mantiene todas las fotos del mismo tamaño */
+
+.imagen-camiseta {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f5f6f4, #e8ece9);
+    border-radius: 12px;
+}
+
+.imagen-camiseta img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.camiseta h3 {
+    margin-bottom: 4px;
+    font-size: 1.2em;
+}
+
+.detalle-camiseta {
+    color: #666;
+    font-family: 'Valley Sans', sans-serif;
+}
+
+.precio-camiseta {
+    margin: 7px 0;
+    font-size: 1.15em;
+}
+
+/* Botón de pedido */
+
+.btn-agregar {
+    width: 160px;
+    margin-top: 5px;
+    padding: 11px 14px;
+    display: inline-block;
+    color: black;
+    background-color: white;
+    border: 1px solid #111;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: #d9d9d9;
+    transform: scale(1.04);
+}
+
+/* Recuadro del carrito */
+.temporada-contenido {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(270px, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.carrito-temporada {
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.carrito-temporada h2 {
+    margin-bottom: 15px;
+    padding: 12px 8px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+.carrito-temporada p {
+    margin: 5px 0;
+}
+
+.carrito-temporada .total-carrito-temporada {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.carrito-temporada button {
+    width: 100%;
+    padding: 11px;
+    color: black;
+    background: white;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn-finalizar {
+    border-radius: 4px;
+    font-size: 1.3rem;
+}
+
+.tarjeta button:hover,
+.btn-finalizar:hover {
+    background-color: rgba(128, 128, 128, 0.35);
+    transform: scale(1.04);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* ITEMS DEL CARRITO */
+.total-compra {
+    font-size: 1.2rem;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.item-carrito button {
+    width: auto;
+    height: auto;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* MODAL DE IMÁGENES */
+#modal-imagen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#img-grande {
+    max-width: 85%;
+    max-height: 85%;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tarjeta img {
+    cursor: zoom-in;
+}
